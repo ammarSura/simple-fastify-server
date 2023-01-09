@@ -6,7 +6,7 @@ const fastify = Fastify({
 
 fastify.get('/', async (request, reply) => {
   console.log('Hello world')
-  return { message: 'Docker fun!' }
+  return reply.send({ message: 'Docker fun!' })
 })
 
 const start = async () => {
